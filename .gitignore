@@ -3,3 +3,6 @@ node_modules
 uploads
 client/node_modules
 client/dist
+node-rag-mongodb/node_modules
+node-rag-mongodb/.env
+node-rag-mongodb/uploads
