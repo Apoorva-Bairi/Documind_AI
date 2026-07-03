@@ -1,0 +1,5 @@
+Passwords must be changed every 90 days.
+
+Two-factor authentication is mandatory.
+
+Confidential company data must not be shared externally.
