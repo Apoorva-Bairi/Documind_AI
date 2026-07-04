@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://your-netlify-site.netlify.app",
+      "https://documindai-qa.netlify.app",
     ],
     credentials: true,
   })
