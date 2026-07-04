@@ -1,66 +1,3 @@
-// import fs from "fs/promises";
-
-// import { RagChunk }
-//   from "../models/RagChunk.js";
-
-// import { chunkText }
-//   from "./chunker.service.js";
-
-// import { createEmbedding }
-//   from "./openai.service.js";
-
-// export async function ingestUploadedFile(
-//   filePath,
-//   fileName
-// ) {
-
-//   if (!filePath) {
-//     throw new Error(
-//       "File path is missing"
-//     );
-//   }
-
-//   const text =
-//     await fs.readFile(
-//       filePath,
-//       "utf-8"
-//     );
-
-//   console.log(
-//     `Reading uploaded file ${fileName}`
-//   );
-
-//   const chunks =
-//     chunkText(text);
-
-//   await RagChunk.deleteMany({
-//     source: fileName,
-//   });
-
-//   for (const chunk of chunks) {
-
-//     const embedding =
-//       await createEmbedding(chunk.text);
-
-//     await RagChunk.create({
-//       text: chunk.text,
-//       embedding,
-//       source: fileName,
-//       chunkIndex: chunk.chunkIndex,
-//       documentName: fileName,
-//     });
-
-//     console.log(
-//       `Stored uploaded chunk ${chunk.chunkIndex}`
-//     );
-//   }
-
-//   return {
-//     fileName,
-//     chunksStored: chunks.length,
-//   };
-// }
-
 import fs from "fs/promises";
 import { PDFParse } from "pdf-parse";
 
@@ -95,6 +32,12 @@ export async function ingestUploadedFile(filePath, fileName, userId) {
   } else {
     throw new Error("Only .txt and .pdf files are supported");
   }
+
+  if (!text.trim()) {
+    throw new Error("No readable text found in this file");
+  }
+
+  console.log("Extracted text length:", text.length);
 
   const chunks = chunkText(text);
 
