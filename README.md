@@ -2,6 +2,21 @@
 
 DocuMind AI is a full-stack AI-powered document assistant built with the MERN stack. It allows users to upload TXT and PDF documents, ask questions based on the uploaded content, and receive AI-generated answers with source references using Retrieval-Augmented Generation (RAG).
 
+---
+
+## Live Links
+
+### Frontend (Netlify)
+https://documindai-qa.netlify.app/
+
+### Backend (Render)
+https://documind-ai-zsii.onrender.com/
+
+### GitHub Repository
+https://github.com/Apoorva-Bairi/Documind_AI
+
+---
+
 ## Features
 
 - User Authentication with JWT
@@ -16,6 +31,8 @@ DocuMind AI is a full-stack AI-powered document assistant built with the MERN st
 - Chat history management
 - Clear chat history with custom confirmation modal
 - Responsive modern UI
+
+---
 
 ## Tech Stack
 
@@ -39,9 +56,14 @@ DocuMind AI is a full-stack AI-powered document assistant built with the MERN st
 - Groq API
 - MongoDB Vector Search
 - Text Chunking
-- Embeddings
+- Custom Embeddings
 
 ---
+
+## Deployment
+
+Frontend deployed on Netlify  
+Backend deployed on Render
 
 ## Project Workflow
 
@@ -63,13 +85,15 @@ Upload Document
 ### Clone Repository
 
 ```bash
-git clone <your-repo-link>
-cd node-rag-mongodb
+git clone https://github.com/Apoorva-Bairi/Documind_AI.git
+cd Documind AI
+
 ```
 
 ### Backend Setup
 
 ```bash
+cd node-rag-mongodb
 npm install
 ```
 
@@ -96,6 +120,14 @@ npm run dev
 cd client
 npm install
 npm run dev
+```
+
+Create `.env`
+
+```env
+
+VITE_API_URL=http://localhost:5000
+
 ```
 
 ---
