@@ -12,7 +12,7 @@ export async function generateAnswer(prompt) {
         content: prompt,
       },
     ],
-    model: "llama-3.1-8b-instant",
+    model: "openai/gpt-oss-20b",
   });
 
   return chatCompletion.choices[0].message.content;
