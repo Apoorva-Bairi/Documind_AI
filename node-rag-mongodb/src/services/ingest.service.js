@@ -9,8 +9,7 @@ import { RagChunk }
 import { chunkText }
   from "./chunker.service.js";
 
-import { createEmbedding }
-  from "./openai.service.js";
+import { createEmbedding } from "./embedding.service.js";
 
 export async function ingestFile() {
 
