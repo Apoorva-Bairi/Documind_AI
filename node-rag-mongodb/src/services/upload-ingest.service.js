@@ -3,7 +3,8 @@ import { PDFParse } from "pdf-parse";
 
 import { RagChunk } from "../models/RagChunk.js";
 import { chunkText } from "./chunker.service.js";
-import { createEmbedding } from "./openai.service.js";
+import { createEmbedding } from "./embedding.service.js";
+
 
 export async function ingestUploadedFile(filePath, fileName, userId) {
   if (!filePath) {
