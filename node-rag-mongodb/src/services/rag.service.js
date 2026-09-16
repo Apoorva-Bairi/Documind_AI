@@ -1,5 +1,5 @@
 import { RagChunk } from "../models/RagChunk.js";
-import { createEmbedding } from "./openai.service.js";
+import { createEmbedding } from "./embedding.service.js";
 import { generateAnswer } from "./groq.service.js";
 import ChatHistory from "../models/ChatHistory.js";
 
